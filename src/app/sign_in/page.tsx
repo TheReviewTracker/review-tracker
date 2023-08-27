@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Cookies from "js-cookie";
 
-import { CLIENT_ID } from "constants/env";
+import { CLIENT_ID } from "app/lib/env";
 
 interface IProps {
   searchParams: { code: string };

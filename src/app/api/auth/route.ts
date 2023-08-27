@@ -1,7 +1,7 @@
 import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 
-import { CLIENT_ID, CLIENT_SECRET } from "constants/env";
+import { CLIENT_ID, CLIENT_SECRET } from "app/lib/env";
 
 export async function POST(request: Request) {
   const { searchParams } = new URL(request.url);
