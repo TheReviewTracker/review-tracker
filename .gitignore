@@ -3,6 +3,7 @@
 .next
 
 *.env
+.env.*
 
 yarn-debug.log*
 yarn-error.log*

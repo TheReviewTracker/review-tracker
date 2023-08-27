@@ -3,15 +3,15 @@
 "use client";
 
 import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Cookies from "js-cookie";
-import { useRouter } from "next/navigation";
+
+import { CLIENT_ID } from "constants/env";
 
 interface IProps {
   searchParams: { code: string };
 }
-
-const CLIENT_ID = "cd00ae41d879ad88a3ac";
 
 const SignInPage = ({ searchParams }: IProps) => {
   const { code } = searchParams;
