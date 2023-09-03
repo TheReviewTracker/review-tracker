@@ -1,21 +1,23 @@
 "use client";
 
-import { useEffect } from "react";
+import { ReactNode, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Cookies from "js-cookie";
 
-const RootPage = () => {
+interface IProps {
+  children: ReactNode;
+}
+
+const MainLayout = ({ children }: IProps) => {
   const router = useRouter();
 
   useEffect(() => {
     if (!Cookies.get("token")) {
       router.push("/sign_in");
-    } else {
-      router.push("/main");
     }
   }, []);
 
-  return <></>;
+  return <div>{children}</div>;
 };
 
-export default RootPage;
+export default MainLayout;
